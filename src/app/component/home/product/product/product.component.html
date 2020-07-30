@@ -1,0 +1,26 @@
+<h3>Product List</h3>
+<table class="dataValues" border="1">
+    <tr>
+        <th style="text-align: center; width: 10%">Photo</th>
+        <th  style="text-align: center; width: 5%">Id</th>
+        <th  style="text-align: center;width: 15%">Name</th>
+        <th  style="text-align: center;width: 50%">Description</th>
+        <th  style="text-align: center; width:10%">Price</th>
+        <th  style="text-align: center;width: 10%">Buy</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td class="img">
+            <img src="assets/images/{{product.photo}}" width="50">
+        </td>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>
+            {{product.description}}
+        </td>
+        <td>{{product.price}}</td>
+       
+        <td>
+            <a [routerLink]="['/cart', { id:product.id }]" (click)="addProduct(product)">Buy Now</a>
+        </td>
+    </tr>
+</table>

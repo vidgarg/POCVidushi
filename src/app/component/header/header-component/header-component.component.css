@@ -1,0 +1,15 @@
+
+
+.header-toolbar .h1 {
+    font-size: 1.2rem;
+
+}
+.header-toolbar{
+    width: 10px;
+}
+.header-toolbar .textbox {
+    border: 1px solid #999;
+        outline: 0;
+        height: 25px;
+        width: 175px;
+}
