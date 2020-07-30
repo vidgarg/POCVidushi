@@ -6,7 +6,7 @@
         <th  style="text-align: center;width: 15%">Name</th>
         <th  style="text-align: center;width: 50%">Description</th>
         <th  style="text-align: center; width:10%">Price</th>
-        <th  style="text-align: center;width: 10%">Buy</th>
+        <th  style="text-align: center;width: 10%">Add To Your Cart</th>
     </tr>
     <tr *ngFor="let product of products">
         <td class="img">
@@ -20,7 +20,7 @@
         <td>{{product.price}}</td>
        
         <td>
-            <a [routerLink]="['/cart', { id:product.id }]" (click)="addProduct(product)">Buy Now</a>
+            <a [routerLink]="['/cart', { id:product.id }]" (click)="addProduct(product)">Add To Cart</a>
         </td>
     </tr>
 </table>
